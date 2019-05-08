@@ -1,0 +1,28 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <span minimaliza-sidebar></span>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <!--<li>-->
+                <!--<span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>-->
+            <!--</li>-->
+            <li class="dropdown" dropdown>
+                <a class="dropdown-toggle count-info" href dropdown-toggle>
+                    {{'LANGUAGE' | translate}}
+                </a>
+                <ul class="dropdown-menu animated fadeInRight m-t-xs" ng-controller="translateCtrl">
+                    <li><a ng-click="changeLanguage('cn')">中文</a></li>
+                    <li><a ng-click="changeLanguage('en')">English</a></li>
+                </ul>
+            </li>
+
+            <li ng-controller="logoutCtrl">
+                <a href="#" id="logoutBtn" ng-click="logoutConfirm()">
+                    <i class="fa fa-sign-out"></i>{{ 'LOGOUT' | translate }}
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+</div>

@@ -1,0 +1,15 @@
+.titleStyle2{
+    background-color: #efefef !important;
+    margin: 0px !important;
+    padding: 0 !important;
+}
+#businessTripPrintModel .printContentBody td{
+    border-right: 1px solid #b1b1b1 !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    display: table-cell!important;
+    border-collapse:collapse  !important;
+}
+.sn{
+    margin: 0px !important;
+    padding: 0px !important;
+}

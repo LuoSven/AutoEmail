@@ -1,0 +1,1 @@
+pm2 restart cz_branded_fare_service_server

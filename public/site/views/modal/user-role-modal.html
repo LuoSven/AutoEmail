@@ -1,0 +1,99 @@
+<div>
+    <div class="modal-header">
+        <h3>{{title}}角色</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form ">
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-1">名称</label>
+                <div class="col-sm-11 ">
+                    <input class=" form-control" type="text" ng-model="model.roleName"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-1">说明</label>
+                <div class="col-sm-11 ">
+                    <input class=" form-control" type="text" ng-model="model.roleDesc"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-1">权限</label>
+                <div class="col-sm-11 ">
+                    <label class=""><input type="checkbox"
+                                           ng-model="model.isAdmin"/>&nbsp;&nbsp;&nbsp;管理员权限(查看所有内容)</label>
+                    <table ng-show="!model.isAdmin" class="table table-bordered">
+                        <tr>
+                            <th>
+                                <input type="checkbox" ng-model="isCheckAll" ng-click="setAllPageRight()">
+                            </th>
+                            <th>页面名称</th>
+                            <th>按钮权限</th>
+                            <th>查看权限<br>
+                                <small>（留空不能访问页面）</small>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <span style="width: 36px" class="inline m-r-sm text-center"
+                                      ng-click="selectColBtnRights(r)" ng-repeat="r in btnRights">
+
+                                    <input type="checkbox" ng-model="r.selected"/>
+                                </span>
+                            </th>
+                            <th>
+                                <span style="width: 72px" class="inline m-r-sm text-center"
+                                      ng-click="selectColViewRights(r)" ng-repeat="r in viewRights">
+                                   
+                                    <input type="checkbox" name="viewRights" ng-model="r.selected"/>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr ng-repeat="page in model.rolePages">
+                            <td>
+                                <input type="checkbox" ng-model="page.checked" ng-click="setPageRight(page)">
+                            </td>
+                            <td>{{page.parent.name}}-{{page.name}}</td>
+                            <td>
+
+
+                                <div ng-click="right.selected=!right.selected"
+                                     class="btn btn-xs m-r-sm {{right.selected?'btn-success':'btn-white'}}"
+
+                                     ng-repeat=" right in page.btnRights">
+                                    {{right.name}}
+
+                                </div>
+
+                            </td>
+                            <td>
+                                <div style="width: 72px" ng-click="selectViewRight(page,right)"
+                                     class="btn btn-xs m-r-sm {{right.selected?'btn-success':'btn-white'}}"
+
+                                     ng-repeat=" right in page.viewRights">
+                                    {{right.name}}
+
+                                </div>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-info" ng-click="save()">保存</button>
+        <button type="button" class="btn btn-white" ng-click="cancel()">取消</button>
+    </div>
+</div>

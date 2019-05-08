@@ -1,0 +1,67 @@
+<div class="row" ng-controller="sendEmailCtrl">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                发送邮件
+            </div>
+            <div id="autoMonitorAndFareGenerate" class="ibox-content">
+                <div class="sk-spinner sk-spinner-cube-grid">
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                    <div class="sk-cube"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  form">
+                        <div class="form-group   m-r-md">
+                            <label class="col-md-2">收件人：</label>
+                            <div class="col-md-10">
+                                <select ng-options="x.name for x in emails" chosen="" multiple
+                                        ng-model="model.toEmails"></select>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group    m-b-md">
+                            <label class="col-md-2">附件：</label>
+                            <div class="col-md-10">
+                                <input multiple id="fileUpload" type="file">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group   m-b-md">
+                            <label class="col-md-2">标题：</label>
+
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" ng-model="model.title">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group  m-b-md">
+                            <label class="col-md-2">内容：</label>
+
+                            <div class="col-md-10">
+                                <textarea  ng-model="model.html" class="form-control" rows="10"></textarea>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12  form">
+                        <div class="btn btn-info btn-sm" ng-click="sendEmail()"> 发送邮件</div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>

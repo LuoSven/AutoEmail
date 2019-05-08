@@ -1,0 +1,2234 @@
+{
+  "货币": {
+    "tableName": "currency",
+    "cols": [
+      {
+        "name": "始发国家码",
+        "key": "A",
+        "value": "depCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "运价货币码",
+        "key": "B",
+        "value": "fareCurrencCode",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": [
+      "depCountryCode",
+      "fareCurrencCode"
+    ]
+  },
+  "区域码": {
+    "tableName": "areaCode",
+    "cols": [
+      {
+        "name": "区域",
+        "key": "A",
+        "value": "area",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "国家码",
+        "key": "B",
+        "value": "countryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "城市码",
+        "key": "C",
+        "value": "cityCode",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": [
+      "area",
+      "countryCode",
+      "cityCode"
+    ]
+  },
+  "Rule Number": {
+    "tableName": "ruleNumber",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Rule Number",
+        "key": "C",
+        "value": "ruleNumber",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": [
+      "depArea",
+      "arrArea",
+      "ruleNumber"
+    ]
+  },
+  "汇率": {
+    "tableName": "exchangeRate",
+    "cols": [
+      {
+        "name": "货币单位",
+        "key": "A",
+        "value": "currencyUnit",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "运价货币码",
+        "key": "B",
+        "value": "fareCurrencyCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "100外币折算人民币",
+        "key": "C",
+        "value": "hundredToRmb",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "进位标志",
+        "key": "D",
+        "value": "carryFlag",
+        "selected": true
+      }
+    ],
+    "idRules": [
+      "fareCurrencyCode"
+    ]
+  },
+  "国家方向码": {
+    "tableName": "countryDirectionCode",
+    "cols": [
+      {
+        "name": "始发",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "运价类型",
+        "key": "C",
+        "value": "fareType",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "国家方向码",
+        "key": "D",
+        "value": "countryDirectionCode",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "Tariff": {
+    "tableName": "tariff",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "始发国家码",
+        "key": "C",
+        "value": "depCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达国家码",
+        "key": "D",
+        "value": "arrCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Tariff",
+        "key": "E",
+        "value": "tariff",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": [
+      "depArea",
+      "arrArea",
+      "depCountryCode",
+      "arrCountryCode",
+      "tariff"
+    ]
+  },
+  "Routing": {
+    "tableName": "routing",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "始发国家码",
+        "key": "C",
+        "value": "depCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达国家码",
+        "key": "D",
+        "value": "arrCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Routing",
+        "key": "E",
+        "value": "routing",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": [
+      "depArea",
+      "arrArea",
+      "depCountryCode",
+      "arrCountryCode",
+      "routing"
+    ]
+  },
+  "舱位选择逻辑": {
+    "tableName": "cabinPriceRange",
+    "cols": [
+      {
+        "name": "from",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "to",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "amount",
+        "key": "C",
+        "value": "amount",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "上浮",
+        "key": "D",
+        "value": "maxRange",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "下浮",
+        "key": "E",
+        "value": "minRange",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "最低舱位",
+        "key": "F",
+        "value": "minCabin",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "经济舱舱位极差",
+        "key": "G",
+        "value": "economyClassLowest",
+        "selected": true,
+        "type": "String",
+        "unitValue": true
+      },
+      {
+        "name": "经济舱舱位极差单位",
+        "key": "G",
+        "value": "economyClassLowestUnit",
+        "selected": true,
+        "type": "String",
+        "unitValue": false,
+        "unit": "CNY"
+      },
+      {
+        "name": "舱位顺序(公务舱)",
+        "key": "H",
+        "value": "businessCabinOrder",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "舱位顺序(经济舱)",
+        "key": "I",
+        "value": "economyCabinOrder",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "外航提前天数",
+        "key": "J",
+        "value": "otherAdvanceDay",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "南航提前天数",
+        "key": "K",
+        "value": "czAdvanceDay",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "最低运价": {
+    "tableName": "lowestFare",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "始发国家码",
+        "key": "C",
+        "value": "depCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达国家码",
+        "key": "D",
+        "value": "arrCountryCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "始发城市码",
+        "key": "E",
+        "value": "depCityCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达城市码",
+        "key": "F",
+        "value": "arrCityCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "F舱位预警价值CNY",
+        "key": "G",
+        "value": "FValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "J舱位预警价值CNY",
+        "key": "H",
+        "value": "JValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "C舱位预警价值CNY",
+        "key": "I",
+        "value": "CValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "D舱位预警价值CNY",
+        "key": "J",
+        "value": "DValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "I舱位预警价值CNY",
+        "key": "K",
+        "value": "IValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "W舱位预警价值CNY",
+        "key": "L",
+        "value": "WValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "S舱位预警价值CNY",
+        "key": "M",
+        "value": "SValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Y舱位预警价值CNY",
+        "key": "N",
+        "value": "YValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "P舱位预警价值CNY",
+        "key": "O",
+        "value": "PValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "B舱位预警价值CNY",
+        "key": "P",
+        "value": "BValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "M舱位预警价值CNY",
+        "key": "Q",
+        "value": "MValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "H舱位预警价值CNY",
+        "key": "R",
+        "value": "HValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "K舱位预警价值CNY",
+        "key": "S",
+        "value": "KValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "U舱位预警价值CNY",
+        "key": "T",
+        "value": "UValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "A舱位预警价值CNY",
+        "key": "U",
+        "value": "AValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "L舱位预警价值CNY",
+        "key": "V",
+        "value": "LValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Q舱位预警价值CNY",
+        "key": "W",
+        "value": "QValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "E舱位预警价值CNY",
+        "key": "X",
+        "value": "EValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "V舱位预警价值CNY",
+        "key": "Y",
+        "value": "VValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Z舱位预警价值CNY",
+        "key": "Z",
+        "value": "ZValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "T舱位预警价值CNY",
+        "key": "AA",
+        "value": "TValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "N舱位预警价值CNY",
+        "key": "AB",
+        "value": "NValue",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "R舱位预警价值CNY",
+        "key": "AC",
+        "value": "RValue",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "Fare Family逻辑": {
+    "tableName": "fareFamily",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "外航最短停留期",
+        "key": "C",
+        "value": "otherMinStayPeriod",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "外航最长停留期",
+        "key": "D",
+        "value": "otherMaxStayPeriod",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "南航最短/最长停留期",
+        "key": "E",
+        "value": "czStayPeriodRange",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "外航提前天数",
+        "key": "F",
+        "value": "otherAdvanceDay",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "南航提前天数",
+        "key": "G",
+        "value": "czAdvanceDay",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "航班号限制",
+        "key": "H",
+        "value": "flightNoLimit",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "舱位",
+        "key": "I",
+        "value": "cabin",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "南航Fare Family",
+        "key": "J",
+        "value": "czFareFamily",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "Sheet1": {
+    "tableName": "user",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "始发区域",
+        "selected": true
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "到达区域",
+        "selected": true
+      },
+      {
+        "name": "始发国家码",
+        "key": "C",
+        "value": "始发国家码",
+        "selected": true
+      },
+      {
+        "name": "到达国家码",
+        "key": "D",
+        "value": "到达国家码",
+        "selected": true
+      },
+      {
+        "name": "始发城市码",
+        "key": "E",
+        "value": "始发城市码",
+        "selected": true
+      },
+      {
+        "name": "到达城市码",
+        "key": "F",
+        "value": "到达城市码",
+        "selected": true
+      },
+      {
+        "name": "E舱位预警价值CNY",
+        "key": "G",
+        "value": "E舱位预警价值CNY",
+        "selected": true
+      },
+      {
+        "name": "V舱位预警价值CNY",
+        "key": "H",
+        "value": "V舱位预警价值CNY",
+        "selected": true
+      },
+      {
+        "name": "Z舱位预警价值CNY",
+        "key": "I",
+        "value": "Z舱位预警价值CNY",
+        "selected": true
+      },
+      {
+        "name": "T舱位预警价值CNY",
+        "key": "J",
+        "value": "T舱位预警价值CNY",
+        "selected": true
+      },
+      {
+        "name": "N舱位预警价值CNY",
+        "key": "K",
+        "value": "N舱位预警价值CNY",
+        "selected": true
+      }
+    ],
+    "idRules": []
+  },
+  "运价管理员管控范围": {
+    "tableName": "userRegionOdConfig",
+    "cols": [
+      {
+        "name": "OD",
+        "key": "A",
+        "value": "od",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "运价制定员",
+        "key": "B",
+        "value": "setter",
+        "selected": true
+      },
+      {
+        "name": "运价分析员",
+        "key": "C",
+        "value": "analyst",
+        "selected": true
+      }
+    ],
+    "idRules": []
+  },
+  "自动监控原始数据-全": {
+    "tableName": "autoMonitorAndFareGenerateFull",
+    "idRules": [],
+    "cols": [
+      {
+        "name": "43659",
+        "type": "String",
+        "value": "43659"
+      },
+      {
+        "name": "ANALYST",
+        "type": "String",
+        "value": "analyst"
+      },
+      {
+        "name": "REGION",
+        "type": "String",
+        "value": "region"
+      },
+      {
+        "name": "ORIGIN_CITY_CODE",
+        "type": "String",
+        "value": "originCityCode"
+      },
+      {
+        "name": "DESTINATION_CITY_CODE",
+        "type": "String",
+        "value": "destinationCityCode"
+      },
+      {
+        "name": "CARRIER_CODE",
+        "type": "String",
+        "value": "carrierCode"
+      },
+      {
+        "name": "FARE_CLASS_CODE",
+        "type": "String",
+        "value": "fareClassCode"
+      },
+      {
+        "name": "CON_METHOD",
+        "type": "String",
+        "value": "conMethod"
+      },
+      {
+        "name": "OW_RT_IND",
+        "type": "String",
+        "value": "owRtInd"
+      },
+      {
+        "name": "FARE_AMOUNT",
+        "type": "String",
+        "value": "fareAmount"
+      },
+      {
+        "name": "FARE_CHANGE_AMOUNT",
+        "type": "String",
+        "value": "fareChangeAmount"
+      },
+      {
+        "name": "TOCHAR_TARIFF_EFFECTIVE_DATE",
+        "type": "String",
+        "value": "tocharTariffEffectiveDate"
+      },
+      {
+        "name": "TOCHAR_DISCONTINUE_DATE",
+        "type": "String",
+        "value": "tocharDiscontinueDate"
+      },
+      {
+        "name": "ROUTING_NUMBER",
+        "type": "String",
+        "value": "routingNumber"
+      },
+      {
+        "name": "ORIGIN_COUNTRY_CODE",
+        "type": "String",
+        "value": "originCountryCode"
+      },
+      {
+        "name": "DESTINATION_COUNTRY_CODE",
+        "type": "String",
+        "value": "destinationCountryCode"
+      },
+      {
+        "name": "FOOTNOTE_CODE",
+        "type": "String",
+        "value": "footnoteCode"
+      },
+      {
+        "name": "RULE_NUMBER",
+        "type": "String",
+        "value": "ruleNumber"
+      },
+      {
+        "name": "FARE_CATEGORY_CODE",
+        "type": "String",
+        "value": "fareCategoryCode"
+      },
+      {
+        "name": "FARE_GROUP_CODE",
+        "type": "String",
+        "value": "fareGroupCode"
+      },
+      {
+        "name": "FARE_GROUP_ID",
+        "type": "String",
+        "value": "fareGroupId"
+      },
+      {
+        "name": "CATEGORY_MIN_STAY",
+        "type": "String",
+        "value": "categoryMinStay"
+      },
+      {
+        "name": "CATEGORY_ADV_PURCHASE",
+        "type": "String",
+        "value": "categoryAdvPurchase"
+      },
+      {
+        "name": "SURCHARGE_AMOUNT",
+        "type": "String",
+        "value": "surchargeAmount"
+      },
+      {
+        "name": "ADJUSTMENT_AMOUNT",
+        "type": "String",
+        "value": "adjustmentAmount"
+      },
+      {
+        "name": "ADJUSTED_AMOUNT",
+        "type": "String",
+        "value": "adjustedAmount"
+      },
+      {
+        "name": "QUEUE_CHANGE_CODE",
+        "type": "String",
+        "value": "queueChangeCode"
+      },
+      {
+        "name": "OAL_WEEKDAY",
+        "type": "String",
+        "value": "oalWeekday"
+      },
+      {
+        "name": "FT_MULTIPLE_RECORD_IND",
+        "type": "String",
+        "value": "ftMultipleRecordInd"
+      },
+      {
+        "name": "TOCHAR_FT_FIRST_TICKETING_DATE",
+        "type": "String",
+        "value": "tocharFtFirstTicketingDate"
+      },
+      {
+        "name": "TOCHAR_FT_LAST_TICKETING_DATE",
+        "type": "String",
+        "value": "tocharFtLastTicketingDate"
+      },
+      {
+        "name": "TOCHAR_FT_TRAVEL_COMMENCE_FROM",
+        "type": "String",
+        "value": "tocharFtTravelCommenceFrom"
+      },
+      {
+        "name": "TOCHAR_FT_TRAVEL_COMMENCE_TO_D",
+        "type": "String",
+        "value": "tocharFtTravelCommenceToD"
+      },
+      {
+        "name": "TOCHAR_FT_TRAVEL_COMPLETION_DA",
+        "type": "String",
+        "value": "tocharFtTravelCompletionDa"
+      },
+      {
+        "name": "TOCHAR_FT_SEASON_START_PERIOD",
+        "type": "String",
+        "value": "tocharFtSeasonStartPeriod"
+      },
+      {
+        "name": "TOCHAR_FT_SEASON_END_PERIOD",
+        "type": "String",
+        "value": "tocharFtSeasonEndPeriod"
+      },
+      {
+        "name": "TOCHAR_FT_BLACKOUT_START_PERIO",
+        "type": "String",
+        "value": "tocharFtBlackoutStartPerio"
+      },
+      {
+        "name": "TOCHAR_FT_BLACKOUT_STOP_PERIOD",
+        "type": "String",
+        "value": "tocharFtBlackoutStopPeriod"
+      },
+      {
+        "name": "TOCHAR_FT_RESERVATION_FROM_DAT",
+        "type": "String",
+        "value": "tocharFtReservationFromDat"
+      },
+      {
+        "name": "TOCHAR_FT_RESERVATION_TO_DATE",
+        "type": "String",
+        "value": "tocharFtReservationToDate"
+      },
+      {
+        "name": "Benchmark ORI",
+        "type": "String",
+        "value": "benchmarkOri"
+      },
+      {
+        "name": "Benchmark DES",
+        "type": "String",
+        "value": "benchmarkDes"
+      },
+      {
+        "name": "CXR",
+        "type": "String",
+        "value": "cxr"
+      },
+      {
+        "name": "TaxGap",
+        "type": "String",
+        "value": "taxgap"
+      },
+      {
+        "name": "Weekday",
+        "type": "String",
+        "value": "weekday"
+      },
+      {
+        "name": "Flight",
+        "type": "String",
+        "value": "flight"
+      },
+      {
+        "name": "Season",
+        "type": "String",
+        "value": "season"
+      },
+      {
+        "name": "60+",
+        "type": "String",
+        "value": "60+"
+      },
+      {
+        "name": "30-59",
+        "type": "String",
+        "value": "30-59"
+      },
+      {
+        "name": "21-29",
+        "type": "String",
+        "value": "21-29"
+      },
+      {
+        "name": "14-20",
+        "type": "String",
+        "value": "14-20"
+      },
+      {
+        "name": "0-6",
+        "type": "String",
+        "value": "0-6"
+      },
+      {
+        "name": "KeyOD?",
+        "type": "String",
+        "value": "keyod"
+      },
+      {
+        "name": "AutoCalc",
+        "type": "String",
+        "value": "autocalc"
+      },
+      {
+        "name": "CZ Fares",
+        "type": "String",
+        "value": "czFares"
+      },
+      {
+        "name": "TAR",
+        "type": "String",
+        "value": "tar"
+      },
+      {
+        "name": "CX",
+        "type": "String",
+        "value": "cx"
+      },
+      {
+        "name": "ORG",
+        "type": "String",
+        "value": "org"
+      },
+      {
+        "name": "DES",
+        "type": "String",
+        "value": "des"
+      },
+      {
+        "name": "FARE CLASS",
+        "type": "String",
+        "value": "fareClass"
+      },
+      {
+        "name": "CUR",
+        "type": "String",
+        "value": "cur"
+      },
+      {
+        "name": "AMOUNT",
+        "type": "String",
+        "value": "amount"
+      },
+      {
+        "name": "O/R",
+        "type": "String",
+        "value": "o/r"
+      },
+      {
+        "name": "RTG",
+        "type": "String",
+        "value": "rtg"
+      },
+      {
+        "name": "FT",
+        "type": "String",
+        "value": "ft"
+      },
+      {
+        "name": "A",
+        "type": "String",
+        "value": "a"
+      },
+      {
+        "name": "RULE",
+        "type": "String",
+        "value": "rule"
+      },
+      {
+        "name": "MULTI REC",
+        "type": "String",
+        "value": "multiRec"
+      },
+      {
+        "name": "DAY/TIME",
+        "type": "String",
+        "value": "day/time"
+      },
+      {
+        "name": "SEASON DATE",
+        "type": "String",
+        "value": "seasonDate"
+      },
+      {
+        "name": "FLIGHT APPL",
+        "type": "String",
+        "value": "flightAppl"
+      },
+      {
+        "name": "ADVP",
+        "type": "String",
+        "value": "advp"
+      },
+      {
+        "name": "MIN/MAX STAY",
+        "type": "String",
+        "value": "min/maxStay"
+      },
+      {
+        "name": "BLACKOUT",
+        "type": "String",
+        "value": "blackout"
+      },
+      {
+        "name": "TRAVEL DATE",
+        "type": "String",
+        "value": "travelDate"
+      },
+      {
+        "name": "SALES DATE",
+        "type": "String",
+        "value": "salesDate"
+      }
+    ]
+  },
+  "使用条件04": {
+    "tableName": "使用条件04",
+    "cols": [
+      {
+        "name": "读取策略表中CAT04内容",
+        "key": "A",
+        "value": "读取策略表中CAT04内容",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "自动生成运价表需求": {
+    "tableName": "自动生成运价表需求",
+    "cols": [
+      {
+        "name": "类型",
+        "key": "A",
+        "value": "类型",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "自动生成运价表",
+        "key": "B",
+        "value": "自动生成运价表",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "FN": {
+    "tableName": "footNote",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "FN",
+        "key": "C",
+        "value": "footNote",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "单程标识": {
+    "tableName": "oneWaySingnal",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "舱位",
+        "key": "C",
+        "value": "cabin",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "单程标识",
+        "key": "D",
+        "value": "oneWaySingnal",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "使用条件02": {
+    "tableName": "config_cat02",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "舱位",
+        "key": "C",
+        "value": "cabin",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "策略",
+        "key": "D",
+        "value": "rule",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "策略Code",
+        "key": "E",
+        "value": "ruleCode",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "使用条件日期": {
+    "tableName": "confit_date",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "CAT03",
+        "key": "C",
+        "value": "cat03",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "CAT11",
+        "key": "D",
+        "value": "cat11",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "CAT14",
+        "key": "E",
+        "value": "cat14",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "CAT15",
+        "key": "F",
+        "value": "cat15",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+},
+  "周中周末淡旺季": {
+    "tableName": "周中周末淡旺季",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "始发区域",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "到达区域",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "周中周末",
+        "key": "C",
+        "value": "周中周末",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "",
+        "key": "D",
+        "value": "",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "",
+        "key": "E",
+        "value": "",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "淡旺季",
+        "key": "F",
+        "value": "淡旺季",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "",
+        "key": "G",
+        "value": "",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "备注",
+        "key": "H",
+        "value": "备注",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "使用条件02-说明": {
+    "tableName": "使用条件02-说明",
+    "cols": [
+      {
+        "name": "",
+        "key": "A",
+        "value": "",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "",
+        "key": "B",
+        "value": "",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "经济舱": {
+    "tableName": "strategy_economy",
+    "cols": [
+      {
+        "name": "OD",
+        "key": "A",
+        "value": "od",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "POO",
+        "key": "B",
+        "value": "poo",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Analyst",
+        "key": "C",
+        "value": "analyst",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Benchmark OD",
+        "key": "D",
+        "value": "benchmarkOd",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Benchmark CXR",
+        "key": "E",
+        "value": "benchmarkCxr",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "TaxGap",
+        "key": "F",
+        "value": "taxgap",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Weekday",
+        "key": "G",
+        "value": "weekday",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Flight",
+        "key": "H",
+        "value": "flight",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Season",
+        "key": "I",
+        "value": "season",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "60+",
+        "key": "J",
+        "value": "60+",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "30-59",
+        "key": "K",
+        "value": "30-59",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "21-29",
+        "key": "L",
+        "value": "21-29",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "14-20",
+        "key": "M",
+        "value": "14-20",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "7-13",
+        "key": "N",
+        "value": "7-13",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "0-6",
+        "key": "O",
+        "value": "0-6",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "KeyOD?",
+        "key": "P",
+        "value": "keyod",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "AutoCalc",
+        "key": "Q",
+        "value": "autocalc",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Strategy Type",
+        "key": "R",
+        "value": "strategyType",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Comments",
+        "key": "S",
+        "value": "comments",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "公务舱": {
+    "tableName": "strategy_business",
+    "cols": [
+      {
+        "name": "OD",
+        "key": "A",
+        "value": "od",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "POO",
+        "key": "B",
+        "value": "poo",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Analyst",
+        "key": "C",
+        "value": "analyst",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Benchmark OD",
+        "key": "D",
+        "value": "benchmarkOd",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Benchmark CXR",
+        "key": "E",
+        "value": "benchmarkCxr",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "TaxGap",
+        "key": "F",
+        "value": "taxgap",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Weekday",
+        "key": "G",
+        "value": "weekday",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Flight",
+        "key": "H",
+        "value": "flight",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Season",
+        "key": "I",
+        "value": "season",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "60+",
+        "key": "J",
+        "value": "60+",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "30-59",
+        "key": "K",
+        "value": "30-59",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "21-29",
+        "key": "L",
+        "value": "21-29",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "14-20",
+        "key": "M",
+        "value": "14-20",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "7-13",
+        "key": "N",
+        "value": "7-13",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "0-6",
+        "key": "O",
+        "value": "0-6",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "KeyOD?",
+        "key": "P",
+        "value": "keyod",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "AutoCalc",
+        "key": "Q",
+        "value": "autocalc",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Strategy Type",
+        "key": "R",
+        "value": "strategyType",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Comments",
+        "key": "S",
+        "value": "comments",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "OAL_FARES": {
+    "tableName": "oal_fares",
+    "idRules": [],
+    "cols": [
+      {
+        "name": "ORIGIN_CITY_CODE",
+        "type": "String",
+        "value": "originCityCode"
+      },
+      {
+        "name": "DESTINATION_CITY_CODE",
+        "type": "String",
+        "value": "destinationCityCode"
+      },
+      {
+        "name": "CARRIER_CODE",
+        "type": "String",
+        "value": "carrierCode"
+      },
+      {
+        "name": "FARE_CLASS_CODE",
+        "type": "String",
+        "value": "fareClassCode"
+      },
+      {
+        "name": "FARE_TARIFF_NUMBER",
+        "type": "String",
+        "value": "fareTariffNumber"
+      },
+      {
+        "name": "CON_METHOD",
+        "type": "String",
+        "value": "conMethod"
+      },
+      {
+        "name": "OW_RT_IND",
+        "type": "String",
+        "value": "owRtInd"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "type": "String",
+        "value": "currencyCode"
+      },
+      {
+        "name": "FARE_AMOUNT",
+        "type": "String",
+        "value": "fareAmount"
+      },
+      {
+        "name": "FARE_CHANGE_AMOUNT",
+        "type": "String",
+        "value": "fareChangeAmount"
+      },
+      {
+        "name": "TOCHAR_TARIFF_EFFECTIVE_DATE",
+        "type": "String",
+        "value": "tocharTariffEffectiveDate"
+      },
+      {
+        "name": "TOCHAR_DISCONTINUE_DATE",
+        "type": "String",
+        "value": "tocharDiscontinueDate"
+      },
+      {
+        "name": "ROUTING_NUMBER",
+        "type": "String",
+        "value": "routingNumber"
+      },
+      {
+        "name": "ORIGIN_AIRPORT_CODE",
+        "type": "String",
+        "value": "originAirportCode"
+      },
+      {
+        "name": "DESTINATION_AIRPORT_CODE",
+        "type": "String",
+        "value": "destinationAirportCode"
+      },
+      {
+        "name": "GLOBAL_ROUTING_IND",
+        "type": "String",
+        "value": "globalRoutingInd"
+      },
+      {
+        "name": "RULE_NUMBER",
+        "type": "String",
+        "value": "ruleNumber"
+      },
+      {
+        "name": "MAXIMUM_PERMITTED_MILEAGE",
+        "type": "String",
+        "value": "maximumPermittedMileage"
+      },
+      {
+        "name": "CABOTAGE_IND",
+        "type": "String",
+        "value": "cabotageInd"
+      },
+      {
+        "name": "BATCH_NUMBER",
+        "type": "String",
+        "value": "batchNumber"
+      },
+      {
+        "name": "TOCHAR_RECEIVED_DATE",
+        "type": "String",
+        "value": "tocharReceivedDate"
+      },
+      {
+        "name": "GFS_FILING_ADVICE_NUMBER",
+        "type": "String",
+        "value": "gfsFilingAdviceNumber"
+      },
+      {
+        "name": "TOCHAR_GFS_FILING_ADVICE_DATE",
+        "type": "String",
+        "value": "tocharGfsFilingAdviceDate"
+      },
+      {
+        "name": "ORIGIN_COUNTRY_CODE",
+        "type": "String",
+        "value": "originCountryCode"
+      },
+      {
+        "name": "DESTINATION_COUNTRY_CODE",
+        "type": "String",
+        "value": "destinationCountryCode"
+      },
+      {
+        "name": "FARE_CATEGORY_CODE",
+        "type": "String",
+        "value": "fareCategoryCode"
+      },
+      {
+        "name": "FARE_GROUP_CODE",
+        "type": "String",
+        "value": "fareGroupCode"
+      },
+      {
+        "name": "FARE_GROUP_ID",
+        "type": "String",
+        "value": "fareGroupId"
+      },
+      {
+        "name": "CATEGORY_MIN_STAY",
+        "type": "String",
+        "value": "categoryMinStay"
+      },
+      {
+        "name": "CATEGORY_ADV_PURCHASE",
+        "type": "String",
+        "value": "categoryAdvPurchase"
+      },
+      {
+        "name": "SURCHARGE_AMOUNT",
+        "type": "String",
+        "value": "surchargeAmount"
+      },
+      {
+        "name": "TOTAL_FARE",
+        "type": "String",
+        "value": "totalFare"
+      },
+      {
+        "name": "FOOTNOTE_CODE",
+        "type": "String",
+        "value": "footnoteCode"
+      },
+      {
+        "name": "FARE_CHANGE_PERCENT",
+        "type": "String",
+        "value": "fareChangePercent"
+      },
+      {
+        "name": "QUEUE_CHANGE_CODE",
+        "type": "String",
+        "value": "queueChangeCode"
+      },
+      {
+        "name": "TRANSMISSION_HOUR",
+        "type": "String",
+        "value": "transmissionHour"
+      },
+      {
+        "name": "ONE_WAY_FARE_AMOUNT",
+        "type": "String",
+        "value": "oneWayFareAmount"
+      },
+      {
+        "name": "ROUND_TRIP_FARE_AMOUNT",
+        "type": "String",
+        "value": "roundTripFareAmount"
+      },
+      {
+        "name": "QUEUE_STATUS_CODE",
+        "type": "String",
+        "value": "queueStatusCode"
+      },
+      {
+        "name": "DIFFERENCE",
+        "type": "String",
+        "value": "difference"
+      },
+      {
+        "name": "PERCENT_DIFFERENCE",
+        "type": "String",
+        "value": "percentDifference"
+      },
+      {
+        "name": "FARE_STATE_CODE",
+        "type": "String",
+        "value": "fareStateCode"
+      },
+      {
+        "name": "DISTRIBUTION_GROUP_NUMBER",
+        "type": "String",
+        "value": "distributionGroupNumber"
+      },
+      {
+        "name": "USER_ACTION_CODE",
+        "type": "String",
+        "value": "userActionCode"
+      },
+      {
+        "name": "EQUIVALENT_AMOUNT",
+        "type": "String",
+        "value": "equivalentAmount"
+      },
+      {
+        "name": "FARE_LOCATION",
+        "type": "String",
+        "value": "fareLocation"
+      },
+      {
+        "name": "POLICY",
+        "type": "String",
+        "value": "policy"
+      },
+      {
+        "name": "NOTES",
+        "type": "String",
+        "value": "notes"
+      },
+      {
+        "name": "ORIGINAL_BOOKING_CLASS_CODE",
+        "type": "String",
+        "value": "originalBookingClassCode"
+      },
+      {
+        "name": "TOCHAR_CHANGE_DATE",
+        "type": "String",
+        "value": "tocharChangeDate"
+      },
+      {
+        "name": "CHANGE_USER",
+        "type": "String",
+        "value": "changeUser"
+      },
+      {
+        "name": "FT_MULTIPLE_RECORD_IND",
+        "type": "String",
+        "value": "ftMultipleRecordInd"
+      },
+      {
+        "name": "TOCHAR_FT_FIRST_TICKETING_DATE",
+        "type": "String",
+        "value": "tocharFtFirstTicketingDate"
+      },
+      {
+        "name": "TOCHAR_FT_LAST_TICKETING_DATE",
+        "type": "String",
+        "value": "tocharFtLastTicketingDate"
+      },
+      {
+        "name": "TOCHAR_FT_TRAVEL_COMMENCE_FROM",
+        "type": "String",
+        "value": "tocharFtTravelCommenceFrom"
+      },
+      {
+        "name": "TOCHAR_FT_TRAVEL_COMMENCE_TO_D",
+        "type": "String",
+        "value": "tocharFtTravelCommenceToD"
+      },
+      {
+        "name": "TOCHAR_FT_TRAVEL_COMPLETION_DA",
+        "type": "String",
+        "value": "tocharFtTravelCompletionDa"
+      },
+      {
+        "name": "TOCHAR_FT_SEASON_START_PERIOD",
+        "type": "String",
+        "value": "tocharFtSeasonStartPeriod"
+      },
+      {
+        "name": "TOCHAR_FT_SEASON_END_PERIOD",
+        "type": "String",
+        "value": "tocharFtSeasonEndPeriod"
+      },
+      {
+        "name": "TOCHAR_FT_BLACKOUT_START_PERIO",
+        "type": "String",
+        "value": "tocharFtBlackoutStartPerio"
+      },
+      {
+        "name": "TOCHAR_FT_BLACKOUT_STOP_PERIOD",
+        "type": "String",
+        "value": "tocharFtBlackoutStopPeriod"
+      },
+      {
+        "name": "TOCHAR_FT_RESERVATION_FROM_DAT",
+        "type": "String",
+        "value": "tocharFtReservationFromDat"
+      },
+      {
+        "name": "TOCHAR_FT_RESERVATION_TO_DATE",
+        "type": "String",
+        "value": "tocharFtReservationToDate"
+      },
+      {
+        "name": "MARKET_ANALYST",
+        "type": "String",
+        "value": "marketAnalyst"
+      },
+      {
+        "name": "MILEAGE_TYPE",
+        "type": "String",
+        "value": "mileageType"
+      },
+      {
+        "name": "MILEAGE",
+        "type": "String",
+        "value": "mileage"
+      },
+      {
+        "name": "CIRCUITY_MILEAGE",
+        "type": "String",
+        "value": "circuityMileage"
+      },
+      {
+        "name": "MARKET_SEQUENCE",
+        "type": "String",
+        "value": "marketSequence"
+      },
+      {
+        "name": "MARKET_GROUP",
+        "type": "String",
+        "value": "marketGroup"
+      },
+      {
+        "name": "MARKET_TYPE",
+        "type": "String",
+        "value": "marketType"
+      }
+    ]
+  },
+  "使用条件03": {
+    "tableName": "config_cat03",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "舱位",
+        "key": "C",
+        "value": "cabin",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "Rule",
+        "key": "D",
+        "value": "rule",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "RuleCode",
+        "key": "E",
+        "value": "ruleCode",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "备注",
+        "key": "F",
+        "value": "note",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "使用条件14 ": {
+    "tableName": "使用条件14 ",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "始发区域",
+        "selected": true
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "到达区域",
+        "selected": true
+      },
+      {
+        "name": "CAT11",
+        "key": "C",
+        "value": "CAT11",
+        "selected": true
+      },
+      {
+        "name": "CAT14",
+        "key": "D",
+        "value": "CAT14",
+        "selected": true
+      },
+      {
+        "name": "CAT15",
+        "key": "E",
+        "value": "CAT15",
+        "selected": true
+      }
+    ],
+    "idRules": []
+  },
+  "使用条件15": {
+    "tableName": "使用条件15",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "始发区域",
+        "selected": true
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "到达区域",
+        "selected": true
+      },
+      {
+        "name": "CAT11",
+        "key": "C",
+        "value": "CAT11",
+        "selected": true
+      },
+      {
+        "name": "CAT14",
+        "key": "D",
+        "value": "CAT14",
+        "selected": true
+      },
+      {
+        "name": "CAT15",
+        "key": "E",
+        "value": "CAT15",
+        "selected": true
+      }
+    ],
+    "idRules": []
+  },
+  "使用条件11-15": {
+    "tableName": "config_cat11to15",
+    "cols": [
+      {
+        "name": "始发区域",
+        "key": "A",
+        "value": "depArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "到达区域",
+        "key": "B",
+        "value": "arrArea",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "cat11",
+        "key": "C",
+        "value": "cat11",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "cat11Code",
+        "key": "D",
+        "value": "cat11Code",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "cat14",
+        "key": "E",
+        "value": "cat14",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "cat14Code",
+        "key": "F",
+        "value": "cat14Code",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "cat15",
+        "key": "G",
+        "value": "cat15",
+        "selected": true,
+        "type": "String"
+      },
+      {
+        "name": "cat15Code",
+        "key": "H",
+        "value": "cat15Code",
+        "selected": true,
+        "type": "String"
+      }
+    ],
+    "idRules": []
+  },
+  "国家码": {
+    "tableName": "国家码",
+    "cols": [
+      {
+        "name": "code",
+        "key": "A",
+        "value": "code",
+        "selected": true
+      },
+      {
+        "name": "name",
+        "key": "B",
+        "value": "name",
+        "selected": true
+      }
+    ],
+    "idRules": []
+  },
+  "策略区域码": {
+    "tableName": "strategyArea",
+    "cols": [
+      {
+        "name": "区域名称",
+        "key": "A",
+        "value": "areaName",
+        "selected": true
+      },
+      {
+        "name": "始发区域",
+        "key": "B",
+        "value": "depArea",
+        "selected": true
+      },
+      {
+        "name": "到达区域",
+        "key": "C",
+        "value": "arrArea",
+        "selected": true
+      }
+    ],
+    "idRules": []
+  }
+}

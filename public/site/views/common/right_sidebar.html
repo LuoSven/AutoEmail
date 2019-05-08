@@ -1,0 +1,30 @@
+<div id="right-sidebar" ng-show="rightSidebar" class="sidebar-open">
+    <div class="sidebar-container" full-scroll>
+
+        <ul class="nav nav-tabs navs-3">
+
+            <li ng-class="{active: tab1}"><a ng-click="tab1 = true; tab2 = false; tab3 = false" ng-init="tab1 = true">
+                路线冲突
+            </a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane" ng-class="{active: tab1}">
+                <div ng-if="planeInteractionArray" class="sidebar-title">
+                    <h3> <i class="fa fa-comments-o"></i>行进路线冲突</h3>
+                    <small><i class="fa fa-tim"></i>共有{{planeInteractionArray.length}}条冲突记录</small>
+                </div>
+                <div>
+                    <div class="sidebar-message" ng-repeat="interaction in planeInteractionArray">
+                        {{interaction}}
+                    </div>
+
+                </div>
+
+            </div>
+
+           
+        </div>
+
+    </div>
+</div>

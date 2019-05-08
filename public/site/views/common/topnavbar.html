@@ -1,0 +1,43 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top"
+         ng-if="false"
+         role="navigation"
+         style="margin-bottom: 0">
+
+        <div class="navbar-header">
+            <span minimaliza-sidebar></span>
+        </div>
+        <ul class="nav navbar-top-links navbar-left m-l-sm">
+            <li>
+                <h3 class="m-t-md text-muted ng-binding">
+                    品牌运价</h3>
+          </li>
+        </ul>
+        <ul class="nav navbar-top-links navbar-right">
+
+            <li   class="text-info">
+                <a href="javascript:void(0);"
+
+                   ng-click="updatePassword()">
+                    <i class="fa fa-key"></i>{{
+                    'UPDATEPASSWORD'
+                    |
+                    translate
+                    }}
+                </a>
+            </li>
+            <li ng-controller="logoutCtrl">
+                <a href="javascript:void(0);"
+                   id="logoutBtn"
+                   ng-click="logoutConfirm()">
+                    <i class="fa fa-sign-out"></i>{{
+                    'LOGOUT'
+                    |
+                    translate
+                    }}
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+</div>

@@ -1,0 +1,163 @@
+.fix-height{
+    min-height: 550px;
+}
+.table-inline-edit input{
+    width: 100px !important;
+}
+.table .pagination{
+    margin: 0;
+}
+/*.paginate_button, .paginate_button:hover{*/
+    /*background-color: #bababa;*/
+    /*border-color: #bababa;*/
+    /*color: #FFFFFF;*/
+    /*margin:0 5px 5px 0;*/
+    /*text-decoration: none;*/
+    /*border-radius: 3px;*/
+    /*padding: 1px 5px;*/
+    /*font-size: 12px;*/
+    /*line-height: 1.5;*/
+/*}*/
+.dataTables_info{float: left;}
+.dataTables_paginate{float:right; clear: right;}
+.dataTables_paginate > span > a.current,
+.dataTables_paginate > span > a.current:hover,
+.dataTables_paginate > span > a.current:focus {
+    background-color: #f4f4f4;
+    border-color: #DDDDDD;
+    color: inherit;
+    cursor: default;
+    z-index: 2;
+}
+.dataTables_paginate > a,
+.dataTables_paginate > span > a {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    color: inherit;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 4px 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+.viewable-row{
+    cursor: pointer;
+}
+/**
+Configurations - planes
+**/
+.aircraftList > li > a{
+    padding: 3px 10px;
+}
+.switchery-small{
+    border-radius: 20px;
+    height: 20px;
+    width: 33px;
+}
+.switchery-small>small {
+    height: 20px;
+    width: 20px;
+}
+.longContainer{
+    min-height: 872px;
+}
+.lopa-rotated{
+    transform: rotate(90deg);
+    padding: 3px;
+}
+.lopa-container .tab-content{
+    width: 920px;
+    height: 216px;
+}
+.lopa-container .tabs-container .panel-body{
+    height: 230px;
+}
+
+.warningStyle{
+    color:red;
+}
+
+/* LOPA STYLE */
+.axis path,
+.axis line{
+    fill: none;
+    stroke: #ccc;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-size: 9px;
+    fill: rgb(103, 106, 108);
+    font-family:'open sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.axis .tick {
+    opacity: 0.7;
+}
+.grid path {
+    stroke-width: 0;
+}
+.cg-chart{
+    stroke: #1AB394;
+    stroke-width: 1;
+    fill: rgba(26,127,148,.1);
+}
+.cg-point{
+    stroke: #ed5565;
+    stroke-width: 2;
+    fill: #ed5565;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.cg-point-valid{
+    stroke: #1AB394;
+    stroke-width: 2;
+    fill: #1AB394;
+    cursor: pointer;
+    z-index: 99;
+}
+.lopa-container{
+    /* 	margin-top: -50px; */
+}
+.showCGTable td{
+    padding: 0 5px;
+}
+
+.wizard > .content{
+    background: none !important;
+}
+
+    /* Plane style*/
+.seats:hover > rect, .seats.seat-assigned > rect{
+    cursor:pointer;
+    background-color: #1ab394;
+    fill:  #1ab394;
+}
+
+.seats:hover > text, .seats.seat-assigned > text{
+    cursor:pointer;
+    color: white;
+    fill: white;
+}
+
+.autocompletelist{
+    border: 1px solid #e5e6e7;
+    border-top: none;
+    background-color: white;
+    max-height: 142px;
+    overflow: auto;
+    box-shadow: 0 3px 5px #ddd;
+}
+.autocompletelist li{
+    padding: 5px 10px !important;
+    cursor: pointer;
+}
+.autocompletelist li:hover{
+    background-color: #efefef;
+}
+
+.table>tbody+tbody {
+    border-top: 1px solid #ddd;
+}

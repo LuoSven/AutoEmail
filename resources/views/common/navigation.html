@@ -1,0 +1,65 @@
+<nav class="navbar-default navbar-static-side" role="navigation" ng-controller="navigationCtrl">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="dropdown profile-element" dropdown>
+                    <!--<img alt="image" class="img-circle" src="img/profile_small.jpg"/>-->
+                    <a class="dropdown-toggle" dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">{{loggedUser.firstName}} {{loggedUser.lastName}}</strong>
+                             </span>
+                                <span ng-if="loggedUser.roleId == 1" class="text-muted text-xs block">管理员</span>
+                                <span ng-if="loggedUser.roleId == 2" class="text-muted text-xs block">普通用户</span>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a ng-click="changeLanguage('cn')">中文</a></li>
+                        <li><a ng-click="changeLanguage('en')">English</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" id="logoutBtn" ng-click="logoutConfirm()">
+                                <i class="fa fa-sign-out"></i>{{ 'LOGOUT' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="logo-element">
+                    Pi
+                </div>
+            </li>
+
+            <li ng-class="{active: $state.includes('loadsheet')}">
+                <a href="index.html">
+                    <i class="fa fa-file"></i><span class="nav-label">舱单管理</span><span class="fa arrow"></span>
+                </a>
+                <ul class="nav nav-second-level" ng-class="{in: $state.includes('loadsheet')}">
+                    <li ui-sref-active="active"><a ui-sref="loadsheet.list">舱单列表</a></li>
+                    <li ui-sref-active="active"><a ui-sref="loadsheet.create.basicInfo({loadsheetId: 'new'})">创建舱单</a></li>
+                    <!--<li ui-sref-active="active"><a ng-href="#/loadsheet/create/basicInfo">创建舱单</a></li>-->
+
+                </ul>
+            </li>
+
+            <li ng-if="isAdmin" ng-class="{active: $state.includes('configurations')}">
+                <a href="index.html">
+                    <i class="fa fa-cogs"></i><span class="nav-label">系统配置</span><span class="fa arrow"></span>
+                </a>
+                    <ul class="nav nav-second-level" ng-class="{in: $state.includes('configurations')}">
+                        <li ui-sref-active="active"><a ui-sref="configurations.general">通用</a></li>
+                        <li ui-sref-active="active"><a ui-sref="configurations.emails">收件人</a></li>
+                        <li ui-sref-active="active"><a ui-sref="configurations.users">系统用户</a></li>
+                        <li ui-sref-active="active"><a ui-sref="configurations.crew">机组信息</a></li>
+                        <li ui-sref-active="active"><a ui-sref="configurations.planes">飞机数据</a></li>
+                        <li ui-sref-active="active"><a ui-sref="configurations.airports">机场数据</a></li>
+                    </ul>
+            </li>
+
+            
+        </ul>
+
+    </div>
+</nav>

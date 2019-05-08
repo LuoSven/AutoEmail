@@ -1,0 +1,81 @@
+<div>
+    <div class="modal-header">
+        <h3>导入数据</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form ">
+            <p>{{uploadMessage}}</p>
+            <div class="form-group form-group-sm">
+                <label for="fileUpload">选择excel文件</label>
+                <input ng-disabled="!isReady" id="fileUpload" type="file" class="form-control"/>
+            </div>
+            <div class="form-group form-group-sm">
+                <label>选择要上传的sheet</label>
+                <div>
+                    <div ng-click="s.selected=!s.selected"
+                         class="btn btn-sm m-r-xs  m-b-xs {{s.selected?'btn-success':'btn-white'}}"
+                         ng-repeat="s in sheets">{{s.name}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label>选择要上传的字段</label>
+                <div>
+                    <div ng-if="s.selected" ng-repeat="s in sheets" style="border: 1px solid #b0afb2"
+                         class="col-sm-4 p-sm">
+                        <h3>{{s.name}}
+
+                        </h3>
+                        <div>
+                            <i class="fa fa-refresh curp fa-fw text-info" uib-tooltip="自动生成列名"
+                               ng-click="autoFieldName(s)"></i>
+                            <br>
+                            <label ng-if="false">
+                                <i class="fa fa-fw curp" ng-click="changeDelete()"
+                                   ng-class="isNoDeleted?'fa-check text-danger':'fa-times text-muted'"></i>不删除原有数据
+                            </label>
+                        </div>
+
+                        <div class="m-b-sm">
+                            <div class="dI">表名：</div>
+                            <input type="text" class="line-input line-input-md" ng-model="s.value"/>
+                        </div>
+                        <div class="m-b-sm" ng-if="s.idRules">
+                            <div class="dI">主建：</div>
+                            <div>
+                                <span class="inline" ng-repeat="f in s.idRules track by $index">{{f}}{{$index===s.idRules.length-1?'':'_'}}</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div ng-repeat="c in s.cols" class="m-b-sm">
+                                <div>
+                                    <input type="checkbox" ng-model="c.selected">
+                                    {{c.name}}
+                                    <i ng-click="setIdRules(s,c.value)" class="fa fa-fw "
+                                       ng-class="s.idRules.indexOf(c.value)!==-1?'fa-star text-danger ':'fa-star-o'"></i>
+                                    <i ng-click="copyCol(c,s,$index)"
+                                       class="fa text-success fa-copy fa-fw pull-right"></i>
+
+                                </div>
+                                <div class="p-w-sm">
+                                    <div class="dI">字段名：</div>
+                                    <input type="text" class="line-input line-input-lg" ng-model="c.value"
+                                           ng-change="sync()"/>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" ng-click="cancel()">关闭</button>
+        <button type="button" class="btn btn-info" ng-if="false" ng-click="sync()">同步字段</button>
+        <button type="button" class="btn btn-danger" ng-disabled="!isCanUpload" ng-click="upload()">导入</button>
+    </div>
+</div>

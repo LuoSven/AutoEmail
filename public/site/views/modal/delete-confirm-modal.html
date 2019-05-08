@@ -1,0 +1,14 @@
+<div ng-controller="usersCtrl">
+    <div class="modal-header">
+        <h3>删除用户</h3> 
+    </div>
+    <div class="modal-body" >
+        <p>确定要删除这个用户吗？</p>
+        <p>用户名：{{selected.username}}</p>
+        
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" ng-click="cancel()">取消</button>
+        <button type="button" class="btn btn-danger" ng-click="confirmDelete(selected)">确定</button>
+    </div>
+</div>

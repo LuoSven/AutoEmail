@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>舱位</th>
+        <th>当前价格</th>
+        <th>计算价格</th>
+        <th>发布价格（CNY）</th>
+        <th>当前范围内</th>
+        <th>是否发布</th>
+        <th>低价预警（CNY）</th>
+        <th>说明</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="c in cabinList">
+        <td>{{c.cabin}}</td>
+        <td>
+            <span ng-if="!c.isNew">{{c.price}}（{{c.currency}}）</span>
+        </td>
+        <td>
+            <span ng-if="!c.isNew"> {{c.price}}（{{c.maxPrice}}-{{c.minPrice}}）</span>
+            <span class="text-warning" uib-tooltip="通过极差算出的价格" ng-if="c.isNew"> {{c.price}}（{{c.maxPrice}}-{{c.minPrice}}）</span>
+        </td>
+        <td><span ng-if="c.isPublish">{{c.publishPrice}}（{{c.cnyPublishPrice}}&nbsp;CNY）</span></td>
+        <td><i ng-if="c.isInRange" class="fa fa-check text-danger fa-fw"></i></td>
+        <td><i ng-if="c.isPublish" class="fa fa-check text-danger fa-fw"></i></td>
+        <td>
+            <span ng-if="c.lowestPrice" class="text-danger">{{c.lowestPrice}}</span>
+        </td>
+        <th>{{c.reason}}</th>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,585 @@
+@media (min-width: 1200px) {
+    .modal-xl {
+        width: 1200px;
+    }
+
+    .modal-full {
+        width: 100%;
+    }
+}
+
+.wrapper-content {
+    overflow-x: hidden;
+}
+
+.fix-height {
+    min-height: 550px;
+}
+
+.table-inline-edit input {
+    width: 100px !important;
+}
+
+.table .pagination {
+    margin: 0;
+}
+
+.table-condensed tr > td:nth-child(odd) {
+    width: 120px;
+    text-align: right;
+}
+
+.itemList {
+    margin-left: 0;
+    padding: 3px;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    height: 100px;
+    overflow-y: auto
+}
+
+.itemList li {
+    list-style: none;
+    padding: 3px 15px;
+}
+
+.itemList li:hover {
+    background-color: #efefef;
+}
+
+.removeIcon {
+    cursor: pointer;
+}
+
+.paginate_button, .paginate_button:hover {
+    background-color: #bababa;
+    border-color: #bababa;
+    color: #FFFFFF;
+    margin: 0 5px 5px 0;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.side-config {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    overflow: visible;
+}
+
+.side-config-box {
+    margin-right: -220px;
+    position: relative;
+    z-index: 1900;
+    transition-duration: 0.8s;
+}
+
+.side-config-box.show {
+    z-index: 2000;
+    margin-right: 0;
+}
+
+.spin-icon {
+    background: #1ab394;
+    position: absolute;
+    padding: 7px 10px 7px 13px;
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    width: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.skin-settings {
+    width: 220px;
+    margin-left: 40px;
+    background: #f3f3f4;
+}
+
+.skin-settings .title {
+    background: #efefef;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.settings-item {
+    padding: 5px 10px;
+    background-color: white;
+    overflow: auto
+}
+
+.settings-item.skin {
+    text-align: center;
+}
+
+.settings-item .switch {
+    float: right;
+}
+
+.side-config-box.show .skin-settings {
+    min-height: 150px;
+    max-height: 82vh;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, .5);
+}
+
+.paging > a.current,
+.paging > a.current:hover,
+.paging > a.current:focus {
+    background-color: #f4f4f4;
+    border-color: #DDDDDD;
+    color: inherit;
+    cursor: default;
+    z-index: 2;
+}
+
+.paging > a:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.paging > a:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.paging > a,
+.paging > span > a {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    color: inherit;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 4px 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+
+#loginContainer {
+    color: #666;
+    height: 280px;
+    width: 460px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+#loginContainer .logo{
+    width: 16px;
+    height: 16px;
+    background: url(/site/images/headfoot.png) no-repeat;
+    display: inline-block;
+    background-position: -140px -40px;
+    transform: scale(1.5);
+
+}
+
+#loginContainer input.form-control {
+    color: #6d6d6d;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #6b6b6b;
+    border-image: initial;
+    border-radius: 15px;
+    background: none;
+    background: #e4f5ff;
+
+}
+
+
+
+#expense .expense-row {
+}
+
+.expense-row-success {
+    color: #3fd800;
+}
+
+.expense-row-cancel {
+    color: #71b3f5;
+}
+
+.expense-row-refused {
+    color: #ff0000;
+}
+
+.expense-row-approve {
+    color: #001df5;
+}
+
+.expense-row-unapply {
+    color: #999999;
+}
+
+.chosen-container {
+    width: 100% !important;
+}
+
+
+.timeline {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.timeline .li {
+    transition: all 200ms ease-in;
+}
+
+.timeline .author {
+    font-weight: 500;
+    line-height: 30px;
+    margin-right: 5px;
+    color: #528fea;
+}
+
+.timeline .eventName {
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.timeline .timestamp {
+    margin-bottom: 5px;
+    padding: 0px 20px;
+    align-items: center;
+    font-weight: 100;
+}
+
+.timeline .status {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #D6DCE0;
+    position: relative;
+    transition: all 200ms ease-in;
+}
+
+.timeline .status h4 {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.timeline .status:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: -8px;
+    left: 42%;
+    transition: all 200ms ease-in;
+}
+
+.timeline .li.complete .status {
+    border-top: 2px solid #66DC71;
+}
+
+.timeline .li.complete .status:before {
+    background-color: #66DC71;
+    border: none;
+    transition: all 200ms ease-in;
+}
+
+.timeline .li.complete .status h4 {
+    color: #4bc157;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+    .timeline {
+        list-style-type: none;
+        display: block;
+    }
+
+    .timeline .li {
+        transition: all 200ms ease-in;
+        display: flex;
+        width: inherit;
+    }
+
+    .timeline .timestamp {
+        width: 100px;
+    }
+
+    .timeline .status:before {
+        left: -8%;
+        top: 30%;
+        transition: all 200ms ease-in;
+    }
+}
+
+.line-input {
+    font-size: 12px;
+    line-height: 20px !important;
+    border: 2px solid #d4d4d4;
+    border-width: 0px 0px 2px 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.line-input-date {
+    width: 111px;
+}
+
+
+#monthlyExpenseReport .title {
+    background-color: #fcf109;
+}
+
+#monthlyExpenseReport .table-bordered > thead > tr > th,
+#monthlyExpenseReport .table-bordered > tbody > tr > th,
+#monthlyExpenseReport .table-bordered > tfoot > tr > th,
+#monthlyExpenseReport .table-bordered > thead > tr > td,
+#monthlyExpenseReport .table-bordered > tbody > tr > td,
+#monthlyExpenseReport .table-bordered > tfoot > tr > td {
+    border: 2px solid #666;
+}
+
+.login-background {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+
+.normalTipMap {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.normalTipMap_item {
+}
+
+.normalTipMap_index {
+}
+
+.normalTipMap_name {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 900;
+}
+
+.normalTipMap_subs {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+
+.light-input, .light-input:focus {
+
+    border: 1px solid #d2d2d2;
+    padding: 2px;
+    border-width: 0px 0px 2px 0px;
+    width: 70px;
+    text-align: right;
+    outline: none;
+
+}
+
+.light-input:focus {
+    border-color: #898989;
+}
+
+.wrongAmount {
+    color: #ff6868;
+    text-decoration: line-through;
+    margin-right: 2px;
+}
+
+#mainExpense .selectedRow {
+    background: #ecf7f7;
+}
+
+.modal-xl {
+    width: 1100px
+}
+
+.line-area {
+    border: 1px solid #d4d4d4;
+}
+
+.line-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 5px;
+    background: inherit;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.line-input {
+    padding: 2px;
+    margin: 0;
+    line-height: 18px !important
+}
+
+.line-input-xxxxs {
+    width: 15px
+}
+
+.line-input-xxxs {
+    width: 25px
+}
+
+.line-input-xxs {
+    width: 40px
+}
+
+.line-input-xs {
+    width: 60px
+}
+
+.line-input-sm {
+    width: 80px
+}
+
+.line-input-md {
+    width: 100px
+}
+
+.line-input-l {
+    width: 120px
+}
+
+.line-input-xl {
+    width: 140px
+}
+
+.line-input-xxl {
+    width: 160px
+}
+
+.line-input-xxxl {
+    width: 180px
+}
+
+.line-input-full {
+    width: 100%
+}
+
+.line-input.error {
+    border: 2px solid red
+}
+
+.table-sm > thead > tr > th, .table-sm > tbody > tr > th, .table-sm > tfoot > tr > th, .table-sm > thead > tr > td, .table-sm > tbody > tr > td, .table-sm > tfoot > tr > td {
+    padding: 2px;
+}
+
+.table-xs > thead > tr > th, .table-xs > tbody > tr > th, .table-xs > tfoot > tr > th, .table-xs > thead > tr > td, .table-xs > tbody > tr > td, .table-xs > tfoot > tr > td {
+    padding: 1px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+#autoMonitorAndFareGenerate .table-container {
+    overflow-x: auto;
+    width: 100%
+}
+
+#autoMonitorAndFareGenerate .table_head {
+    margin-bottom: -1px;
+}
+
+#autoMonitorAndFareGenerate .tbody_container {
+    max-height: 400px;
+    overflow-y: auto;
+    width: fit-content;
+}
+
+#autoMonitorAndFareGenerate .tbody_container .table_body {
+    margin-top: -30px;
+}
+
+#autoMonitorAndFareGenerate .fare_details_container, #autoMonitorAndFareGenerate .fare_details {
+    border: 1px solid #bdbdbd
+}
+
+#autoMonitorAndFareGenerate .fare_details_container {
+    border-width: 0px 1px 1px 0px;
+    float: left;
+    margin: 10px;
+}
+
+#autoMonitorAndFareGenerate .fare_details {
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    border-width: 1px 0px 0px 1px;
+    padding: 3px;
+    background: #fdfdfd;
+    width: 10%;
+    cursor: pointer;
+}
+
+#autoMonitorAndFareGenerate .fare_details:hover {
+    background: #f3f3f3;
+}
+
+#autoMonitorAndFareGenerate .fare_details:hover .fare_details_title, #autoMonitorAndFareGenerate .fare_details:hover .fare_details_value {
+    overflow: visible
+}
+
+#autoMonitorAndFareGenerate .fare_details:hover .fare_details_title span, #autoMonitorAndFareGenerate .fare_details:hover .fare_details_value span {
+    z-index: 999;
+    color: #000;
+    position: relative;
+    font-weight: 600;
+}
+
+#autoMonitorAndFareGenerate .fare_details .fare_details_title {
+    color: #c7c7c7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+#autoMonitorAndFareGenerate .fare_details .fare_details_value {
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.label-input {
+    width: 40px;
+    border: 0px;
+    background: inherit;
+    float: right;
+    text-align: right;
+}

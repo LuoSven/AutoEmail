@@ -1,0 +1,99 @@
+<table id="fareAutoTemplateData" class="table table-bordered  ">
+
+    <tbody>
+    <tr>
+        <td colspan="7"></td>
+        <td>
+            单程：3<br>
+            往返：2<br>
+        </td>
+        <td colspan="2"></td>
+        <td>
+            N:新建 I:上调 R:下调 X:删除
+        </td>
+    </tr>
+    <tr>
+        <td>Tariff number</td>
+        <td>Carrier code</td>
+        <td>ORG</td>
+        <td>DES</td>
+        <td>Fare Basis</td>
+        <td>Currency</td>
+        <td>Amount</td>
+        <td>OW/RT</td>
+        <td>Routing</td>
+        <td>Foot note</td>
+        <td>Action code</td>
+        <td>Rule number</td>
+        <td>CAT02 Day of Week</td>
+        <td>CAT03 Sesonality</td>
+        <td>CAT04 Flight</td>
+        <td>Cat11 Blackout date</td>
+        <td>Cat14 Travel period</td>
+        <td>Cat15 Sales period</td>
+    </tr>
+    <tr ng-repeat="row in fareAutoTemplateData">
+        <td>{{row.tariffNumber}}</td>
+        <td>CZ</td>
+        <td>{{row.org}}</td>
+        <td>{{row.des}}</td>
+        <td>{{row.fareBasis}}</td>
+        <td>{{row.currency}}</td>
+        <td>{{row.amount}}</td>
+        <td>{{row['ow/rt']}}</td>
+        <td>{{row.routing}}</td>
+        <td>{{row.footNote}}</td>
+        <td>N</td>
+        <td>{{row.ruleNumber}}</td>
+        <td>{{row.cat02}}</td>
+        <td>{{row.cat03}}</td>
+        <td>{{row.cat04}}</td>
+        <td>{{row.cat11}}</td>
+        <td>{{row.cat14}}</td>
+        <td>{{row.cat15}}</td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td >Others follow the reactive general rules</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+
+    </tbody>
+</table>

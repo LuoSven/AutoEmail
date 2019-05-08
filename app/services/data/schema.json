@@ -1,0 +1,26 @@
+{
+
+  "menu": {
+    "order": {
+      "type": "Number"
+    },
+    "name": {
+      "type": "String"
+    },
+    "abstract": {
+      "type": "Boolean"
+    },
+    "url": {
+      "type": "String"
+    },
+    "icon": {
+      "type": "String"
+    },
+    "category": {
+      "type": "String"
+    },
+    "menus": {
+      "type": "Array"
+    }
+  },
+}

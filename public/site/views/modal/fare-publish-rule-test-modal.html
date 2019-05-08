@@ -1,0 +1,131 @@
+<div>
+    <div class="modal-header">
+        <h3>测试逻辑验证</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form ">
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">amount</label>
+                <div class="col-sm-10 ">
+                    <input class=" form-control" type="text" ng-model="model.amount"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">from</label>
+                <div class="col-sm-10 ">
+                    <input class=" form-control" type="text" ng-change="autoCountryCode()" ng-model="model.from"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">to</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.to" ng-change="autoCountryCode()" class="form-control"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">fromCountryCode</label>
+                <div class="col-sm-10 ">
+                    <input class=" form-control" type="text" ng-model="model.fromCountryCode"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">toCountryCode</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.toCountryCode" class="form-control"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">fromArea</label>
+                <div class="col-sm-10 ">
+                    <input class=" form-control" type="text" ng-model="model.fromArea"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">toArea</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.toArea" class="form-control"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">fareCategoryCode</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.fareCategoryCode" class="form-control"/>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">fareGroupCode</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.fareGroupCode" class="form-control"/>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">fareBasisCabin</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.fareBasisCabin" class="form-control"/>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">owrt</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.owrt" class="form-control"/>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">flight</label>
+                <div class="col-sm-10 ">
+
+                    <input type="text" ng-model="model.flight" class=" form-control"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">价格查询去除的舱位<br>（模拟舱位选择逻辑用）</label>
+                <div class="col-sm-10 ">
+
+                    <input type="text" ng-model="model.noInCabin" class=" form-control"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <hr class="hr-line-solid">
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">fareFamily</label>
+                <div class="col-sm-10 ">
+                    <input type="text" ng-model="model.fareFamily" class=" form-control"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group form-group-sm m-b-sm">
+                <label class="col-sm-2">cabin</label>
+                <div class="col-sm-10 " ng-include="'site/views/modal/_cabinPriceList.html'">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-white" ng-click="test('strategy')">测试策略</button>
+        <button type="button" class="btn btn-white" ng-click="test('fareFamily')">查询fareFamily</button>
+        <button type="button" class="btn btn-white" ng-click="test('cabin')">查询舱位</button>
+        <button type="button" class="btn btn-white" ng-click="cancel()">关闭</button>
+    </div>
+</div>

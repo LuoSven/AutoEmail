@@ -1,0 +1,50 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu" ng-controller="menuCtrl">
+            <li class="nav-header">
+                <div class="dropdown profile-element" dropdown>
+                    <a class="dropdown-toggle" dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <h3 class="font-bold">{{loggedUser.userName}}</h3>
+                                </span>
+
+                                <span class="block m-t-xs">
+                                    <h5 class="font-bold">{{loggedUser.role.roleName}}</h5>
+                                </span>
+                            </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#" id="logoutBtn" ng-click="logoutConfirm()">
+                                <i class="fa fa-sign-out"></i>{{ 'LOGOUT' | translate }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--<li ui-sref-active="active" class="active">-->
+            <!--<a ui-sref="businessTrip.index" href="/businessTripExpense/index"><i class="fa fa-lightbulb-o"></i><span-->
+            <!--class="nav-label">出差报销单申请</span> </a>-->
+            <!--</li>-->
+
+            <li ng-if="menus" ng-repeat="menu in menus" ng-class="{active: $state.includes(menu.url)}">
+                <a>
+                    <i class="fa {{menu.icon}}"></i>
+                    <span class="nav-label ng-binding">{{menu.name}}</span>
+                    <span class="fa arrow"></span>
+                </a>
+                <ul ng-if="menu.menus||menu.menus.length>0" class="nav nav-second-level collapse"
+                    ng-class="{in: $state.includes(menu.url)}">
+                    <li ng-repeat="subMenu in menu.menus" ui-sref-active="active">
+                        <a ui-sref="{{subMenu.url}}">{{subMenu.name}}</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
